@@ -7,3 +7,18 @@ elif opcao == "7":
 
 else:
     print("Função ainda não implementada.")
+    def emprestar(livros):
+
+    ...
+    
+def devolver(livros):
+
+    ...
+
+elif opcao == "2":
+
+    emprestar(livros)
+
+elif opcao == "3":
+
+    devolver(livros)
