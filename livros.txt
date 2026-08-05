@@ -1,0 +1,1 @@
+luan;luan;2010;C:\Users\Aluno\AppData\Local\Python\pythoncore-3.14-64\python.exe c:/Users/Aluno/Downloads/Luan/sistema-de-biblioteca/Main.py;Disponível
