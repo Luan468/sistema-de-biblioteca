@@ -1,7 +1,7 @@
 ARQUIVO = "livros.txt"
 
 
-# Carrega os livros salvos no arquivo
+# Carregar os livros
 def carregar_livros():
     livros = []
 
@@ -21,3 +21,10 @@ def carregar_livros():
                 }
 
                 livros.append(livro)
+
+        arquivo.close()
+
+    except FileNotFoundError:
+        pass
+
+    return livros
