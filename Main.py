@@ -157,4 +157,27 @@ def buscar(livros):
 
     if not encontrou:
         print("Livro não encontrado.")
-        
+ # Ordenar livros
+def ordenar(livros):
+    print("\nOrdenar livros")
+    print("1 - Título")
+    print("2 - Autor")
+    print("3 - Ano")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        livros.sort(key=lambda livro: livro["titulo"].lower())
+
+    elif opcao == "2":
+        livros.sort(key=lambda livro: livro["autor"].lower())
+
+    elif opcao == "3":
+        livros.sort(key=lambda livro: livro["ano"])
+
+    else:
+        print("Opção inválida.")
+        return
+
+    print("Lista ordenada.")
+    listar(livros)       
