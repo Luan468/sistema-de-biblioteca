@@ -180,4 +180,48 @@ def ordenar(livros):
         return
 
     print("Lista ordenada.")
-    listar(livros)       
+    listar(livros) 
+    # Menu principal
+def menu():
+    livros = carregar_livros()
+
+    while True:
+        print("\nSISTEMA DE BIBLIOTECA")
+        print("1 - Cadastrar livro")
+        print("2 - Emprestar livro")
+        print("3 - Devolver livro")
+        print("4 - Listar livros")
+        print("5 - Buscar livro")
+        print("6 - Ordenar livros")
+        print("7 - Sair")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            cadastrar(livros)
+
+        elif opcao == "2":
+            emprestar(livros)
+
+        elif opcao == "3":
+            devolver(livros)
+
+        elif opcao == "4":
+            listar(livros)
+
+        elif opcao == "5":
+            buscar(livros)
+
+        elif opcao == "6":
+            ordenar(livros)
+
+        elif opcao == "7":
+            salvar_livros(livros)
+            print("Programa encerrado.")
+            break
+
+        else:
+            print("Opção inválida.")
+
+
+menu()      
