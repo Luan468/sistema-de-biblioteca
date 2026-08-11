@@ -1,24 +1,23 @@
-if opcao == "1":
-    cadastrar(livros)
+ARQUIVO = "livros.txt"
 
-elif opcao == "7":
-    salvar_livros(livros)
-    break
 
-else:
-    print("Função ainda não implementada.")
-    def emprestar(livros):
+# Carrega os livros salvos no arquivo
+def carregar_livros():
+    livros = []
 
-    ...
-    
-def devolver(livros):
+    try:
+        arquivo = open(ARQUIVO, "r", encoding="utf-8")
 
-    ...
+        for linha in arquivo:
+            dados = linha.strip().split(";")
 
-elif opcao == "2":
+            if len(dados) == 5:
+                livro = {
+                    "titulo": dados[0],
+                    "autor": dados[1],
+                    "ano": dados[2],
+                    "codigo": dados[3],
+                    "status": dados[4]
+                }
 
-    emprestar(livros)
-
-elif opcao == "3":
-
-    devolver(livros)
+                livros.append(livro)
